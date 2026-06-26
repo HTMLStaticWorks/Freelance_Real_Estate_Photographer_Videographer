@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
           <ul class="navbar-nav gap-2">
             <li class="nav-item dropdown">
-              <a class="nav-link nav-link-premium dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link nav-link-premium " href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
                 Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
@@ -103,8 +103,15 @@
   <!-- Offcanvas Mobile Menu -->
   <div class="offcanvas-premium d-xl-none">
     <ul class="offcanvas-nav">
-      <li><a class="offcanvas-nav-link" href="index.html">Home 1</a></li>
-      <li><a class="offcanvas-nav-link" href="home-2.html">Home 2</a></li>
+      <li class="nav-item dropdown">
+        <a class="offcanvas-nav-link " href="#" id="offcanvasHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+          Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="offcanvasHomeDropdown" style="background: transparent; border: none; padding-left: 1rem; position: static !important;">
+          <li><a class="dropdown-item dropdown-item-premium" href="index.html">Home 1</a></li>
+          <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+        </ul>
+      </li>
       <li><a class="offcanvas-nav-link" href="about.html">About</a></li>
       <li><a class="offcanvas-nav-link" href="services.html">Services</a></li>
       <li><a class="offcanvas-nav-link" href="portfolio.html">Portfolio</a></li>
@@ -120,8 +127,8 @@
       <div class="row align-items-center justify-content-center min-vh-100 text-center">
         <div class="col-lg-8 hero-content py-5">
           <span class="accent-text mb-3 d-block">Freelance Real Estate Photographer & Videographer</span>
-          <h1 class="display-1 text-uppercase mb-4">Visual Stories That Make Properties Stand Out</h1>
-          <p class="lead mb-5">
+          <h1 class="display-1 text-uppercase mb-4 text-white">Visual Stories That Make Properties Stand Out</h1>
+          <p class="lead mb-5 text-white-50">
             A collection of real estate photography, cinematic videos, drone captures, and virtual experiences created to help properties attract the right audience.
           </p>
           <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
@@ -242,7 +249,7 @@
       </div>
 
       <!-- Categories Filter Buttons -->
-      <div class="portfolio-filters justify-content-start mb-5 d-flex flex-wrap gap-2">
+      <div class="portfolio-filters justify-content-center mb-5 d-flex flex-wrap gap-2">
         <button class="portfolio-filter-btn active" data-filter="all">All</button>
         <button class="portfolio-filter-btn" data-filter="luxury">Luxury Homes</button>
         <button class="portfolio-filter-btn" data-filter="apartments">Apartments</button>
@@ -282,7 +289,7 @@
         <!-- Item 3: Luxury - Kitchen -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="luxury">
           <div class="portfolio-item">
-            <img src="assets/after-shoot.jpg" class="portfolio-item-img" alt="Gourmet Kitchen" style="filter: sepia(0.15) contrast(1.05);">
+            <img src="assets/chef-kitchen.png" class="portfolio-item-img" alt="Gourmet Kitchen">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Luxury Homes</span>
               <h3 class="h4 mt-2">Marble Chef's Kitchen</h3>
@@ -294,7 +301,7 @@
         <!-- Item 4: Luxury - Bedroom -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="luxury">
           <div class="portfolio-item">
-            <img src="assets/before-shoot.jpg" class="portfolio-item-img" alt="Master Bedroom">
+            <img src="assets/virtual-bedroom.jpg" class="portfolio-item-img" alt="Master Bedroom">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Luxury Homes</span>
               <h3 class="h4 mt-2">Master Bedroom Suite</h3>
@@ -306,7 +313,7 @@
         <!-- Item 5: Apartments - Balcony -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="apartments">
           <div class="portfolio-item">
-            <img src="assets/after-shoot.jpg" class="portfolio-item-img" alt="Penthouse Balcony" style="filter: contrast(1.1) brightness(0.9);">
+            <img src="assets/penthouse-balcony.png" class="portfolio-item-img" alt="Penthouse Balcony">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Apartments</span>
               <h3 class="h4 mt-2">Skyline Penthouse Balcony</h3>
@@ -318,7 +325,7 @@
         <!-- Item 6: Apartments - Interior -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="apartments">
           <div class="portfolio-item">
-            <img src="assets/before-shoot.jpg" class="portfolio-item-img" alt="Loft Interior" style="filter: hue-rotate(-20deg) brightness(1.05);">
+            <img src="assets/virtual-living.jpg" class="portfolio-item-img" alt="Loft Interior">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Apartments</span>
               <h3 class="h4 mt-2">Minimalist Loft Lounge</h3>
@@ -330,7 +337,7 @@
         <!-- Item 7: Apartments - Building exterior -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="apartments">
           <div class="portfolio-item">
-            <img src="assets/hero-exterior.jpg" class="portfolio-item-img" alt="Apartment Facade" style="filter: contrast(0.95) saturate(0.85);">
+            <img src="assets/apartment-facade.png" class="portfolio-item-img" alt="Apartment Facade">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Apartments</span>
               <h3 class="h4 mt-2">High-Rise Residential Facade</h3>
@@ -342,7 +349,7 @@
         <!-- Item 8: Drone - Aerial house -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="drone">
           <div class="portfolio-item">
-            <img src="assets/hero-exterior.jpg" class="portfolio-item-img" alt="Aerial Estate View" style="filter: brightness(0.9) contrast(1.05) saturate(1.15);">
+            <img src="assets/drone-estate.png" class="portfolio-item-img" alt="Aerial Estate View">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Drone Photography</span>
               <h3 class="h4 mt-2">Malibu Coastal Estate Aerial</h3>
@@ -354,7 +361,7 @@
         <!-- Item 9: Drone - Property location -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="drone">
           <div class="portfolio-item">
-            <img src="assets/before-shoot.jpg" class="portfolio-item-img" alt="Location Mapping" style="filter: contrast(1.15) brightness(0.85);">
+            <img src="assets/drone-lot.png" class="portfolio-item-img" alt="Location Mapping">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Drone Photography</span>
               <h3 class="h4 mt-2">Lot Boundaries Coordinates</h3>
@@ -366,7 +373,7 @@
         <!-- Item 10: Drone - Landscape -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="drone">
           <div class="portfolio-item">
-            <img src="assets/hero-exterior.jpg" class="portfolio-item-img" alt="Coastal Landscape" style="filter: hue-rotate(180deg) brightness(0.85);">
+            <img src="assets/drone-coastal.png" class="portfolio-item-img" alt="Coastal Landscape">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Drone Photography</span>
               <h3 class="h4 mt-2">Coastal Hills Overlook</h3>
@@ -378,7 +385,7 @@
         <!-- Item 11: Commercial - Office -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="commercial">
           <div class="portfolio-item">
-            <img src="assets/after-shoot.jpg" class="portfolio-item-img" alt="Office Atrium" style="filter: grayscale(1) brightness(0.9);">
+            <img src="assets/office-atrium.png" class="portfolio-item-img" alt="Office Atrium">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Commercial</span>
               <h3 class="h4 mt-2">Corporate Office Atrium</h3>
@@ -390,7 +397,7 @@
         <!-- Item 12: Commercial - Building -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="commercial">
           <div class="portfolio-item">
-            <img src="assets/hero-exterior.jpg" class="portfolio-item-img" alt="Corporate Facade" style="filter: invert(0.05) contrast(1.1) brightness(0.9);">
+            <img src="assets/glass-tower.png" class="portfolio-item-img" alt="Corporate Facade">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Commercial</span>
               <h3 class="h4 mt-2">Glass Tower Elevation</h3>
@@ -402,7 +409,7 @@
         <!-- Item 13: Virtual Tour -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="virtual-tours">
           <div class="portfolio-item">
-            <img src="assets/before-shoot.jpg" class="portfolio-item-img" alt="3D Walkthrough View" style="filter: saturate(0.5) contrast(1.2);">
+            <img src="assets/lidar-scan.png" class="portfolio-item-img" alt="3D Walkthrough View">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Virtual Tours</span>
               <h3 class="h4 mt-2">3D LiDAR Dollhouse Scan</h3>
@@ -414,7 +421,7 @@
         <!-- Item 14: Videos -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="videos">
           <div class="portfolio-item">
-            <img src="assets/after-shoot.jpg" class="portfolio-item-img" alt="Walkthrough Video preview">
+            <img src="assets/walkthrough-video.png" class="portfolio-item-img" alt="Walkthrough Video preview">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Videos</span>
               <h3 class="h4 mt-2">Cinematic Walkthrough Film</h3>
@@ -426,7 +433,7 @@
         <!-- Item 15: Photography -->
         <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="photography">
           <div class="portfolio-item">
-            <img src="assets/virtual-living.jpg" class="portfolio-item-img" alt="Virtual Living Space">
+            <img src="assets/virtual-pool.jpg" class="portfolio-item-img" alt="Virtual Living Space">
             <div class="portfolio-item-overlay">
               <span class="accent-text text-white-50">Photography</span>
               <h3 class="h4 mt-2">Luxury Living Space</h3>
@@ -434,7 +441,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
     </div>
@@ -474,7 +480,7 @@
             <!-- Handle Bar -->
             <div class="ba-handle">
               <div class="ba-handle-button">
-                <i class="bi bi-arrows-expand-vertical" style="transform: rotate(90deg);"></i>
+                <i class="bi bi-arrow-left-right"></i>
               </div>
             </div>
 
@@ -495,12 +501,12 @@
           <div class="section-title-wrapper mb-4">
             <div class="section-number">04</div>
             <span class="accent-text">Flight Operations</span>
-            <h2 class="display-3 text-uppercase mt-2 mb-4">See Properties From A New Perspective</h2>
+            <h2 class="display-3 text-uppercase mt-2 mb-4 text-white">See Properties From A New Perspective</h2>
           </div>
-          <p class="lead text-muted mb-4">
+          <p class="lead text-white-50 mb-4">
             Aerial photography and drone videos create powerful property presentations that capture location, scale, and surroundings.
           </p>
-          <p class="small text-muted mb-4">
+          <p class="small text-white-50 mb-4">
             Certified FAA Part 107 operations allow for safe, legal twilight flights. Highlight the surrounding coastal context, acreage boundaries, and neighborhood links precisely.
           </p>
           <a href="contact.html" class="btn btn-premium">Coordinate Drone Session</a>
@@ -509,23 +515,6 @@
         <div class="col-lg-6 offset-lg-1">
           <div class="drone-video-container">
             <img src="assets/hero-exterior.jpg" alt="Drone View Simulation" style="width:100%; height:100%; object-fit:cover; transform:scale(1.15); filter: contrast(1.1) brightness(0.95);">
-            <div class="drone-hud">
-              <div class="d-flex justify-content-between">
-                <span>REC 4K 60FPS</span>
-                <span>ALT: 120FT</span>
-              </div>
-              <div class="text-center">
-                <svg width="60" height="60" viewBox="0 0 100 100" style="opacity: 0.6;">
-                  <circle cx="50" cy="50" r="40" stroke="var(--accent-color)" stroke-width="1.5" fill="none" stroke-dasharray="8 4"/>
-                  <line x1="50" y1="10" x2="50" y2="90" stroke="var(--accent-color)" stroke-width="1"/>
-                  <line x1="10" y1="50" x2="90" y2="50" stroke="var(--accent-color)" stroke-width="1"/>
-                </svg>
-              </div>
-              <div class="d-flex justify-content-between">
-                <span>GPS LOCK [34.0206° N, 118.4104° W]</span>
-                <span>BATT: 85%</span>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -646,11 +635,11 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 py-5">
           <span class="accent-text mb-3 d-block">Launch Your Campaign</span>
-          <h2 class="display-2 text-uppercase mb-4" style="color: #ffffff;">Ready To Showcase Your Property?</h2>
-          <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">
+          <h2 class="display-2 text-uppercase mb-4 text-white">Ready To Showcase Your Property?</h2>
+          <p class="lead text-white mb-5 mx-auto" style="max-width: 600px;">
             Coordinate a custom session and select the optimal daylight windows to showcase your luxury listing coordinates.
           </p>
-          <a href="contact.html" class="btn btn-premium btn-lg px-5 py-3">Schedule A Photography Session</a>
+          <a href="contact.html" class="btn btn-premium btn-lg px-5 py-3 text-white" style="border-color: rgba(var(--accent-rgb), 0.5);">Schedule A Photography Session</a>
         </div>
       </div>
     </div>
@@ -697,7 +686,7 @@
 
         <!-- Col 3: Legal / Extra Pages -->
         <div class="col-md-4 col-lg-2">
-          <h5 class="small accent-text mb-4">Pages</h5>
+          <h5 class="small accent-text mb-4">Resources</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
             <li><a href="service-details.html" class="footer-link">Service Details</a></li>
             <li><a href="404.html" class="footer-link">404 Error</a></li>
@@ -721,8 +710,8 @@
         <div class="col-md-6 text-center text-md-start">
           <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
         </div>
-        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-          <a href="#" class="footer-link me-4">Privacy Policy</a>
+        <div class="col-md-6 d-flex gap-4 justify-content-center justify-content-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link">Privacy Policy</a>
           <a href="#" class="footer-link">Terms of Service</a>
         </div>
       </div>

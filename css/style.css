@@ -237,6 +237,7 @@ p, .lead {
   background-color: var(--accent-color);
   transform: scaleX(0);
   transition: var(--transition-smooth);
+  border: none !important;
 }
 
 .nav-link-premium:hover::after,
@@ -334,7 +335,13 @@ p, .lead {
   z-index: -1;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ensure buttons in dark image hero sections stay white in light mode */
+.hero-wrapper[style*="url"] .btn-premium:not(:hover),
+.section-padding[style*="url"] .btn-premium:not(:hover),
+.hero-center .btn-premium:not(:hover) {
+  color: #ffffff !important;
 }
 
 .btn-premium:hover {
@@ -345,6 +352,20 @@ p, .lead {
 .btn-premium:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.btn-premium-filled {
+  color: #080808 !important;
+}
+.btn-premium-filled::before {
+  transform: scaleX(1);
+}
+.btn-premium-filled:hover {
+  color: var(--text-color) !important;
+}
+.btn-premium-filled:hover::before {
+  transform: scaleX(0);
+  transform-origin: right;
 }
 
 /* Hamburger & Offcanvas Mobile Menu */
@@ -421,14 +442,34 @@ p, .lead {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  display: block;
+  display: inline-block;
   padding: 1rem;
   transition: var(--transition-smooth);
+  position: relative;
 }
 
-.offcanvas-nav-link:hover {
+.offcanvas-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: var(--transition-smooth);
+  border: none !important;
+}
+
+.offcanvas-nav-link:hover,
+.offcanvas-nav-link.active {
   color: var(--accent-color);
   transform: scale(1.05);
+}
+
+.offcanvas-nav-link:hover::after,
+.offcanvas-nav-link.active::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 1100px) {
@@ -710,6 +751,19 @@ p, .lead {
   background-color: rgba(var(--accent-rgb), 0.05);
 }
 
+@media (max-width: 767.98px) {
+  .portfolio-filters {
+    gap: 0.5rem;
+  }
+  .portfolio-filter-btn {
+    flex: 1 1 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.25rem); /* Ensures they don't stretch beyond 50% */
+    padding: 0.6rem 0.2rem;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}
+
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -742,6 +796,12 @@ p, .lead {
   transform: translateY(10px);
   transition: var(--transition-smooth);
   z-index: 2;
+}
+
+.portfolio-item-overlay h3,
+.portfolio-item-overlay p,
+.portfolio-item-overlay span {
+  color: #ffffff !important;
 }
 
 .portfolio-item:hover .portfolio-item-img {
@@ -1116,11 +1176,10 @@ p, .lead {
 
 .form-control-premium {
   width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
-  padding: 0.75rem 0;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
   border-radius: 0;
   transition: var(--transition-fast);
@@ -1128,14 +1187,14 @@ p, .lead {
 
 .form-control-premium:focus {
   outline: none;
-  border-bottom-color: var(--accent-color);
+  border-color: var(--accent-color);
   box-shadow: none;
 }
 
 .form-label-premium {
   position: absolute;
   top: 0.75rem;
-  left: 0;
+  left: 1rem;
   color: var(--text-muted);
   pointer-events: none;
   transition: var(--transition-fast);
@@ -1145,6 +1204,7 @@ p, .lead {
 .form-control-premium:focus ~ .form-label-premium,
 .form-control-premium:not(:placeholder-shown) ~ .form-label-premium {
   top: -1.25rem;
+  left: 0;
   font-size: 0.8rem;
   color: var(--accent-color);
 }
@@ -1565,6 +1625,8 @@ p, .lead {
 .services-detailed-list {
   list-style: none;
   padding-left: 0;
+  text-align: left;
+  display: inline-block;
 }
 
 .services-detailed-list li {

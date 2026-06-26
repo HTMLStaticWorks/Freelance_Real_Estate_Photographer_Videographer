@@ -50,7 +50,7 @@
         <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
           <ul class="navbar-nav gap-2">
             <li class="nav-item dropdown">
-              <a class="nav-link nav-link-premium dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link nav-link-premium active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
                 Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
@@ -105,8 +105,15 @@
   <!-- Full-Screen Offcanvas Mobile Menu -->
   <div class="offcanvas-premium d-xl-none">
     <ul class="offcanvas-nav">
-      <li><a class="offcanvas-nav-link" href="index.html">Home 1</a></li>
-      <li><a class="offcanvas-nav-link" href="home-2.html">Home 2</a></li>
+      <li class="nav-item dropdown">
+        <a class="offcanvas-nav-link " href="#" id="offcanvasHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+          Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="offcanvasHomeDropdown" style="background: transparent; border: none; padding-left: 1rem; position: static !important;">
+          <li><a class="dropdown-item dropdown-item-premium" href="index.html">Home 1</a></li>
+          <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+        </ul>
+      </li>
       <li><a class="offcanvas-nav-link" href="about.html">About</a></li>
       <li><a class="offcanvas-nav-link" href="services.html">Services</a></li>
       <li><a class="offcanvas-nav-link" href="portfolio.html">Portfolio</a></li>
@@ -174,7 +181,7 @@
       </div>
 
       <!-- Categories Filter -->
-      <div class="portfolio-filters justify-content-start">
+      <div class="portfolio-filters justify-content-center">
         <button class="portfolio-filter-btn active" data-filter="all">All Properties</button>
         <button class="portfolio-filter-btn" data-filter="luxury">Luxury Homes</button>
         <button class="portfolio-filter-btn" data-filter="apartments">Apartments</button>
@@ -222,6 +229,18 @@
           </div>
         </div>
 
+        <!-- Item 4 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="commercial">
+          <div class="portfolio-item">
+            <img src="assets/virtual-living.jpg" class="portfolio-item-img" alt="Commercial Office Space">
+            <div class="portfolio-item-overlay">
+              <span class="accent-text text-white-50">Commercial</span>
+              <h3 class="h4 mt-2">Executive Office Suite</h3>
+              <p class="small text-muted mb-0">Chicago, IL | 2025</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -233,7 +252,7 @@
       
       <!-- Section Header -->
       <div class="row section-title-wrapper">
-        <div class="col-12 text-center text-xl-start">
+        <div class="col-12 text-center">
           <div class="section-number">03</div>
           <span class="accent-text">Post-Production Mastery</span>
           <h2 class="display-2 mt-2">Before & After Showcase</h2>
@@ -261,7 +280,7 @@
             <!-- Handle Bar -->
             <div class="ba-handle">
               <div class="ba-handle-button">
-                <i class="bi bi-arrows-expand-vertical" style="transform: rotate(90deg);"></i>
+                <i class="bi bi-arrow-left-right"></i>
               </div>
             </div>
 
@@ -279,9 +298,9 @@
       <!-- Section Header -->
       <div class="row section-title-wrapper align-items-center">
         <div class="col-lg-6 text-center text-xl-start">
-          <div class="section-number">04</div>
+          <div class="section-number text-white-50">04</div>
           <span class="accent-text">Aerial View</span>
-          <h2 class="display-2 mt-2">See Every Property From Above</h2>
+          <h2 class="display-2 mt-2 text-white">See Every Property From Above</h2>
           <p class="lead mt-4 text-white-50">I deliver FAA-certified drone paths, establishing complete visual boundaries and beautiful lot sizes.</p>
         </div>
         
@@ -443,7 +462,7 @@
 
         <!-- Col 3: Legal / Extra Pages -->
         <div class="col-md-4 col-lg-2">
-          <h5 class="small accent-text mb-4">Pages</h5>
+          <h5 class="small accent-text mb-4">Resources</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
             <li><a href="service-details.html" class="footer-link">Service Details</a></li>
             <li><a href="404.html" class="footer-link">404 Error</a></li>
@@ -467,8 +486,8 @@
         <div class="col-md-6 text-center text-md-start">
           <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
         </div>
-        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-          <a href="#" class="footer-link me-4">Privacy Policy</a>
+        <div class="col-md-6 d-flex gap-4 justify-content-center justify-content-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link">Privacy Policy</a>
           <a href="#" class="footer-link">Terms of Service</a>
         </div>
       </div>

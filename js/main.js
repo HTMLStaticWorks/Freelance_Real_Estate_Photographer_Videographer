@@ -218,7 +218,10 @@ function initMobileMenu() {
   toggler.addEventListener('click', toggleMenu);
   
   links.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      if (link.hasAttribute('data-bs-toggle')) {
+        return; // Don't close menu if clicking a dropdown toggle
+      }
       if (menu.classList.contains('show')) {
         toggleMenu();
       }
