@@ -106,12 +106,6 @@
       visibility: visible;
       transform: scale(1) rotate(0deg);
     }
-    
-    @media (max-width: 991.98px) {
-      .hover-project-floating-img {
-        display: none !important;
-      }
-    }
 
     /* Spatial Columns Grid */
     .spatial-column {
@@ -142,24 +136,6 @@
     .tech-row span:last-child {
       font-size: 0.9rem;
       color: var(--text-muted);
-    }
-
-    /* Mobile/Tablet project thumbnail */
-    .project-mobile-thumb {
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      margin-bottom: 0.5rem;
-    }
-    .project-mobile-thumb img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .hover-project-item:hover .project-mobile-thumb img {
-      transform: scale(1.04);
     }
   </style>
 
@@ -307,9 +283,6 @@
             <span class="project-title">The Malibu Vista</span>
             <span class="project-meta">Malibu Coastline | 2026</span>
           </a>
-          <div class="project-mobile-thumb d-lg-none">
-            <img src="assets/hero-exterior.jpg" alt="The Malibu Vista">
-          </div>
         </li>
 
         <li class="hover-project-item" data-image="assets/after-shoot.jpg">
@@ -318,9 +291,6 @@
             <span class="project-title">Sienna Crest Estate</span>
             <span class="project-meta">Modernist Villa | 2025</span>
           </a>
-          <div class="project-mobile-thumb d-lg-none">
-            <img src="assets/after-shoot.jpg" alt="Sienna Crest Estate">
-          </div>
         </li>
 
         <li class="hover-project-item" data-image="assets/before-shoot.jpg">
@@ -329,9 +299,6 @@
             <span class="project-title">Brutalist Concrete Pavilion</span>
             <span class="project-meta">Concrete Forms | 2026</span>
           </a>
-          <div class="project-mobile-thumb d-lg-none">
-            <img src="assets/before-shoot.jpg" alt="Brutalist Concrete Pavilion">
-          </div>
         </li>
 
         <li class="hover-project-item" data-image="assets/hero-exterior.jpg">
@@ -340,12 +307,9 @@
             <span class="project-title">Pacific Glass Residence</span>
             <span class="project-meta">Ocean Overlooks | 2026</span>
           </a>
-          <div class="project-mobile-thumb d-lg-none">
-            <img src="assets/hero-exterior.jpg" alt="Pacific Glass Residence">
-          </div>
         </li>
 
-        <!-- The Shared floating image container following the mouse (desktop only) -->
+        <!-- The Shared floating image container following the mouse (all devices) -->
         <div id="floating-project-img" class="hover-project-floating-img">
           <img id="floating-project-img-src" src="assets/hero-exterior.jpg" alt="Preview Frame">
         </div>
@@ -598,12 +562,36 @@
       
       let boxX = 0, boxY = 0;
       let targetX = 0, targetY = 0;
+      let isFirstMove = true;
       
       // Track coordinates and slide box smoothly (lerp)
+      const updateCoords = (x, y) => {
+        targetX = x + 25; // slightly offset from cursor/touch
+        targetY = y - 110;
+        
+        // Instant position on the very first detection to avoid sliding in from (0,0)
+        if (isFirstMove) {
+          boxX = targetX;
+          boxY = targetY;
+          isFirstMove = false;
+        }
+      };
+
       document.addEventListener('mousemove', (e) => {
-        targetX = e.clientX + 25; // slightly offset from cursor
-        targetY = e.clientY - 110;
+        updateCoords(e.clientX, e.clientY);
       });
+      
+      document.addEventListener('touchmove', (e) => {
+        if (e.touches && e.touches.length) {
+          updateCoords(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchstart', (e) => {
+        if (e.touches && e.touches.length) {
+          updateCoords(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
       
       function renderLoop() {
         boxX += (targetX - boxX) * 0.12;
@@ -616,21 +604,36 @@
       }
       renderLoop();
       
-      // Update image sources on hover
+      // Update image sources on hover/touch
       items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
+        const showImage = () => {
           const imgUrl = item.getAttribute('data-image');
           floatingSrc.src = imgUrl;
           floatingBox.style.opacity = '1';
           floatingBox.style.visibility = 'visible';
           floatingBox.style.transform = 'scale(1) rotate(0deg)';
-        });
-        
-        item.addEventListener('mouseleave', () => {
+        };
+
+        const hideImage = () => {
           floatingBox.style.opacity = '0';
           floatingBox.style.visibility = 'hidden';
           floatingBox.style.transform = 'scale(0.85) rotate(-5deg)';
-        });
+          isFirstMove = true; // reset so next interaction starts instantly at new position
+        };
+
+        // Desktop hover
+        item.addEventListener('mouseenter', showImage);
+        item.addEventListener('mouseleave', hideImage);
+
+        // Mobile touch support
+        item.addEventListener('touchstart', (e) => {
+          if (e.touches && e.touches.length) {
+            updateCoords(e.touches[0].clientX, e.touches[0].clientY);
+          }
+          showImage();
+        }, { passive: true });
+        
+        item.addEventListener('touchend', hideImage, { passive: true });
       });
     });
   </script>
