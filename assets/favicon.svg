@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    circle { stroke: #d4af37; fill: none; stroke-width: 2; }
+    .top-poly { fill: #d4af37; opacity: 0.4; }
+    .bottom-poly { fill: #d4af37; opacity: 0.8; }
+    line { stroke: #d4af37; stroke-width: 1; }
+    @media (prefers-color-scheme: light) {
+      circle { stroke: #bfa15f; }
+      .top-poly { fill: #bfa15f; }
+      .bottom-poly { fill: #bfa15f; }
+      line { stroke: #bfa15f; }
+    }
+  </style>
+  <circle cx="50" cy="50" r="45"/>
+  <polygon points="50,15 70,45 30,45" class="top-poly"/>
+  <polygon points="50,85 70,55 30,55" class="bottom-poly"/>
+  <line x1="50" y1="15" x2="50" y2="85"/>
+</svg>

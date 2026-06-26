@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Property Not Found | ArchLens</title>
+  
+  <!-- CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- 3D WebGL Background -->
+  <div id="canvas-container" class="canvas-container" style="opacity: 0.35;"></div>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-premium scrolled fixed-top">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand-premium" href="index.html">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+            <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+            <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+            <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+          </svg>
+          <span>ArchLens</span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-premium dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item dropdown-item-premium" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Controls (Theme, RTL, CTA) -->
+        <div class="header-controls">
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="btn-control" aria-label="Toggle Theme">
+            <i class="bi bi-sun"></i>
+          </button>
+          
+          <!-- RTL Toggle -->
+          <button id="rtl-toggle" class="btn-control" aria-label="Toggle RTL/LTR">RTL</button>
+          
+          <!-- Primary CTA -->
+          <a href="contact.html" class="btn btn-premium d-none d-xl-inline-block">Book a Shoot</a>
+          
+          <!-- Mobile Menu Toggler -->
+          <button class="navbar-toggler-premium d-xl-none" type="button" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Error Screen -->
+  <section class="error-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          
+          <div class="section-number mb-3" style="font-size: 8rem; color: rgba(212,175,55,0.12);">404</div>
+          <span class="accent-text">Invalid Coordinates</span>
+          <h1 class="display-2 mt-2 mb-4 text-uppercase">Property Not Located</h1>
+          
+          <p class="lead text-muted mb-5">
+            The architectural address you are looking for does not exist in my records, or the listing has been taken off the market.
+          </p>
+          
+          <a href="index.html" class="btn btn-premium px-5 py-3">Return to Headquarters</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-premium">
+    <div class="container">
+      
+      <div class="row g-5 mb-5 justify-content-between">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand-premium mb-3 d-inline-flex" style="text-decoration: none;" href="index.html">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+              <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+              <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+              <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+            </svg>
+            <span>ArchLens</span>
+          </a>
+          <p class="small text-muted">
+            I photograph luxury spaces with premium architectural details. Delivering million-dollar portfolios for premium real estate brokers globally.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-link"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-vimeo fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Explore</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal / Extra Pages -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Pages</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">Service Details</a></li>
+            <li><a href="404.html" class="footer-link">404 Error</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Book Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="col-md-4 col-lg-3">
+          <h5 class="small accent-text mb-4">Contact Me</h5>
+          <p class="small text-muted mb-2">Based in Los Angeles, California</p>
+          <a href="mailto:shoot@archlens.com" class="footer-link d-block mb-1">shoot@archlens.com</a>
+          <a href="tel:+13105550199" class="footer-link d-block">+1 (310) 555-0199</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="row pt-4 border-top border-secondary-subtle" style="border-color: var(--border-color) !important;">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link me-4">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/canvas-3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

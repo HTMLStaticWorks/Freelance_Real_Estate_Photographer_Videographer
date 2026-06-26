@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | ArchLens</title>
+  <meta name="description"
+    content="View my luxury real estate photography and drone cinematography packages. Affordable and premium options for high-value properties.">
+
+  <!-- CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-center">
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Loading Preloader -->
+  <div class="preloader">
+    <div class="preloader-shutter"></div>
+    <div class="preloader-text">ArchLens</div>
+  </div>
+
+  <!-- 3D WebGL Background removed -->
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-premium scrolled fixed-top">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand-premium" href="index.html">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+            <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+            <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+            <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+          </svg>
+          <span>ArchLens</span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-premium dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item dropdown-item-premium" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium active" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Controls (Theme, RTL, CTA) -->
+        <div class="header-controls">
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="btn-control" aria-label="Toggle Theme">
+            <i class="bi bi-sun"></i>
+          </button>
+          
+          <!-- RTL Toggle -->
+          <button id="rtl-toggle" class="btn-control" aria-label="Toggle RTL/LTR">RTL</button>
+          
+          <!-- Primary CTA -->
+          <a href="contact.html" class="btn btn-premium d-none d-xl-inline-block">Book a Shoot</a>
+          
+          <!-- Mobile Menu Toggler -->
+          <button class="navbar-toggler-premium d-xl-none" type="button" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas-premium d-xl-none">
+    <ul class="offcanvas-nav">
+      <li><a class="offcanvas-nav-link" href="index.html">Home 1 - Interactive 3D</a></li>
+      <li><a class="offcanvas-nav-link" href="home-2.html">Home 2 - Editorial Showcase</a></li>
+      <li><a class="offcanvas-nav-link" href="about.html">About</a></li>
+      <li><a class="offcanvas-nav-link" href="services.html">Services</a></li>
+      <li><a class="offcanvas-nav-link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="offcanvas-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="offcanvas-nav-link" href="contact.html">Contact</a></li>
+      <li class="mt-4"><a href="contact.html" class="btn btn-premium px-5">Book a Shoot</a></li>
+    </ul>
+  </div>
+
+  <!-- Pricing Content Section -->
+  <section class="section-padding" style="margin-top: 80px;">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-5">
+        <div class="col-12">
+          <div class="section-number">05</div>
+          <span class="accent-text">Investment</span>
+          <h1 class="display-2 mt-2">Per-Listing Media Packages</h1>
+          <p class="lead mt-3">Simple transparent rates designed to suit luxury listing profiles. No hidden fees, flat
+            rate travel included.</p>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+
+      <!-- Pricing Cards Grid -->
+      <div class="row g-4 justify-content-center align-items-stretch pricing-grid-trigger">
+
+        <!-- Starter Package -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="p-5 border border-secondary-subtle h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--border-color) !important;">
+            <div>
+              <span class="accent-text" style="color: var(--accent-color);">Essential Coverage</span>
+              <h3 class="h4 mt-2">Starter Shoot</h3>
+              <div class="pricing-price">$490<span style="font-size: 1rem; color: var(--text-muted);"> / listing</span>
+              </div>
+              <p class="small text-muted">Perfect for standard apartment leases and residential homes under 2,000 sq ft.
+              </p>
+
+              <ul class="pricing-features">
+                <li>15 Wide-Angle HDR Stills</li>
+                <li>Professional Retouching</li>
+                <li>Ambient Exposure Corrections</li>
+                <li>Digital Sky Replacement</li>
+                <li>24-Hour Link Delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="contact.html" class="btn btn-premium w-100 mt-4">Select Starter</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Package (Featured) -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="p-5 border h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--accent-color) !important;">
+            <div>
+              <span class="accent-text" style="color: var(--accent-color);">Most Requested</span>
+              <h3 class="h4 mt-2">Professional Package</h3>
+              <div class="pricing-price">$890<span style="font-size: 1rem; color: var(--text-muted);"> / listing</span>
+              </div>
+              <p class="small text-muted">Tailored for beautiful listings up to 4,000 sq ft that need drone perspective
+                context.</p>
+
+              <ul class="pricing-features">
+                <li>25 Wide-Angle Editorial Stills</li>
+                <li>8 FAA Licensed Drone Photos</li>
+                <li>60-Second Social Video Reel</li>
+                <li>Twilight Capture (Golden Hour)</li>
+                <li>MLS-Ready Layouts</li>
+                <li>24-Hour Delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="contact.html" class="btn btn-premium w-100 mt-4"
+                style="background-color: var(--accent-color); color: #080808 !important;">Select Professional</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Luxury Package -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="p-5 border border-secondary-subtle h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--border-color) !important;">
+            <div>
+              <span class="accent-text" style="color: var(--accent-color);">Ultimate Showcase</span>
+              <h3 class="h4 mt-2">Luxury Villa Package</h3>
+              <div class="pricing-price">$1,490<span style="font-size: 1rem; color: var(--text-muted);"> /
+                  listing</span></div>
+              <p class="small text-muted">Designed for million-dollar estates, architectural designs, and large
+                commercial lots.</p>
+
+              <ul class="pricing-features">
+                <li>40 High-End Retouched Stills</li>
+                <li>15 FAA Licensed Aerial Clips & Photos</li>
+                <li>3-Min Cinematic 4K Walkthrough Video</li>
+                <li>Matterport 3D Virtual Tour Embed</li>
+                <li>Detailed schematics floor plan</li>
+                <li>Priority 24-Hour Delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="contact.html" class="btn btn-premium w-100 mt-4">Select Luxury</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Detailed Pricing Breakdowns -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-5 text-center">
+        <div class="col-12">
+          <div class="section-number">06</div>
+          <span class="accent-text">Details</span>
+          <h2 class="display-2 mt-2">Additional Pricing Structures</h2>
+          <p class="lead mt-3 mx-auto text-muted" style="max-width: 650px;">A detailed overview of standalone, a-la-carte, and custom commercial commissions.</p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        
+        <!-- Column 1: Photography & Video A-la-carte -->
+        <div class="col-lg-6">
+          
+          <!-- Topic: Photography Packages -->
+          <div class="mb-5">
+            <span class="accent-text" style="color: var(--accent-color);">01 / A-La-Carte</span>
+            <h3 class="h4 text-uppercase mt-2 mb-3">Photography Packages</h3>
+            <p class="small text-muted mb-4">
+              If you only require high-end stills without video or virtual tours, we offer dedicated architectural photography rates.
+            </p>
+            <ul class="services-detailed-list">
+              <li><strong>Essential Stills ($350):</strong> 12 HDR interior/exterior wide stills, ideal for basic MLS entries.</li>
+              <li><strong>Premium Stills ($550):</strong> 25 retouched editorial stills, custom twilight scheduling included.</li>
+              <li><strong>Architectural Stills ($900):</strong> 40 high-resolution full-frame detail captures, focus stacking, and polarization.</li>
+              <li><strong>Twilight Add-On ($200):</strong> Convert any daytime photography package to include sunset glow sweeps.</li>
+            </ul>
+          </div>
+
+          <!-- Topic: Video Packages -->
+          <div>
+            <span class="accent-text" style="color: var(--accent-color);">02 / Standalone Motion</span>
+            <h3 class="h4 text-uppercase mt-2 mb-3">Video Packages</h3>
+            <p class="small text-muted mb-4">
+              Engaging, motion-guided real estate walkthrough videos tailored for landing pages, social media, and client portfolios.
+            </p>
+            <ul class="services-detailed-list">
+              <li><strong>Social Media Reel ($300):</strong> 30-60 second vertical video cut (9:16) optimized for Instagram & TikTok.</li>
+              <li><strong>Cinematic Showcase ($600):</strong> 2-minute horizontal walkthrough (16:9) featuring smooth gimbal orbits.</li>
+              <li><strong>Complete Cinematic Suite ($850):</strong> 3-minute listing video with custom sound design and licensed music.</li>
+              <li><strong>Aerial Drone Loop ($250):</strong> Standalone 4K drone cinematography sweep showing absolute lot boundaries.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Column 2: Custom Projects & Per-Listing Rules -->
+        <div class="col-lg-6">
+          
+          <!-- Topic: Custom Projects -->
+          <div class="mb-5">
+            <span class="accent-text" style="color: var(--accent-color);">03 / Custom Commissions</span>
+            <h3 class="h4 text-uppercase mt-2 mb-3">Custom Projects</h3>
+            <p class="small text-muted mb-4">
+              For builders, interior designers, architects, and hospitality brands needing tailored media portfolios.
+            </p>
+            <p class="small text-muted mb-3">
+              Commercial projects require specific licensing agreements depending on where and how the assets will be distributed. We work on custom daily rates or package quotes.
+            </p>
+            <ul class="services-detailed-list">
+              <li><strong>Half-Day Rate ($650):</strong> Up to 4 hours on-site, capturing detailed textures and lighting conditions.</li>
+              <li><strong>Full-Day Rate ($1,200):</strong> Up to 8 hours on-site, planning scenes around the path of the sun.</li>
+              <li><strong>Asset Licensing:</strong> Commercial distribution rights tailored for magazines, advertisements, and websites.</li>
+              <li><strong>Staging & Styling:</strong> Collaborative staging guidance to ensure rooms show clear spatial depth.</li>
+            </ul>
+          </div>
+
+          <!-- Topic: Per-Listing Rules -->
+          <div>
+            <span class="accent-text" style="color: var(--accent-color);">04 / Package Guidelines</span>
+            <h3 class="h4 text-uppercase mt-2 mb-3">Per-Listing Packages</h3>
+            <p class="small text-muted mb-4">
+              Our standard flat-rate bundles are governed by simple, transparent scheduling guidelines.
+            </p>
+            <ul class="services-detailed-list">
+              <li><strong>Square Footage Rules:</strong> Flat rates cover properties up to 4,000 sq ft. Larger properties are quoted individually.</li>
+              <li><strong>Travel Radii:</strong> Round-trip travel within 50 miles of the studio is included. Travel beyond is billed at $0.75/mile.</li>
+              <li><strong>Revision Policy:</strong> Includes one round of minor color and sequence revisions. Extra edits are billed hourly.</li>
+              <li><strong>Delivery Timelines:</strong> Digital assets are delivered within 24-48 hours via secure hosting links.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-premium text-start">
+    <div class="container">
+      
+      <div class="row g-5 mb-5 justify-content-between">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand-premium mb-3 d-inline-flex" style="text-decoration: none;" href="index.html">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+              <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+              <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+              <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+            </svg>
+            <span>ArchLens</span>
+          </a>
+          <p class="small text-muted">
+            I photograph luxury spaces with premium architectural details. Delivering million-dollar portfolios for premium real estate brokers globally.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-link"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-vimeo fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Explore</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal / Extra Pages -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Pages</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">Service Details</a></li>
+            <li><a href="404.html" class="footer-link">404 Error</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Book Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="col-md-4 col-lg-3">
+          <h5 class="small accent-text mb-4">Contact Me</h5>
+          <p class="small text-muted mb-2">Based in Los Angeles, California</p>
+          <a href="mailto:shoot@archlens.com" class="footer-link d-block mb-1">shoot@archlens.com</a>
+          <a href="tel:+13105550199" class="footer-link d-block">+1 (310) 555-0199</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="row pt-4 border-top border-secondary-subtle" style="border-color: var(--border-color) !important;">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link me-4">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- <script src="js/canvas-3d.js"></script> -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

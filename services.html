@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | ArchLens</title>
+  <meta name="description" content="Explore my high-end real estate media services: architectural photography, drone footage, property films, and virtual tours.">
+  
+  <!-- CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="text-center">
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Loading Preloader -->
+  <div class="preloader">
+    <div class="preloader-shutter"></div>
+    <div class="preloader-text">ArchLens</div>
+  </div>
+
+  <!-- 3D WebGL Background -->
+  <div id="canvas-container" class="canvas-container" style="opacity: 0.35;"></div>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-premium scrolled fixed-top">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand-premium" href="index.html">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+            <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+            <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+            <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+          </svg>
+          <span>ArchLens</span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-premium dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item dropdown-item-premium" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium active" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Controls (Theme, RTL, CTA) -->
+        <div class="header-controls">
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="btn-control" aria-label="Toggle Theme">
+            <i class="bi bi-sun"></i>
+          </button>
+          
+          <!-- RTL Toggle -->
+          <button id="rtl-toggle" class="btn-control" aria-label="Toggle RTL/LTR">RTL</button>
+          
+          <!-- Primary CTA -->
+          <a href="contact.html" class="btn btn-premium d-none d-xl-inline-block">Book a Shoot</a>
+          
+          <!-- Mobile Menu Toggler -->
+          <button class="navbar-toggler-premium d-xl-none" type="button" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas-premium d-xl-none">
+    <ul class="offcanvas-nav">
+      <li><a class="offcanvas-nav-link" href="index.html">Home 1</a></li>
+      <li><a class="offcanvas-nav-link" href="home-2.html">Home 2</a></li>
+      <li><a class="offcanvas-nav-link" href="about.html">About</a></li>
+      <li><a class="offcanvas-nav-link" href="services.html">Services</a></li>
+      <li><a class="offcanvas-nav-link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="offcanvas-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="offcanvas-nav-link" href="contact.html">Contact</a></li>
+      <li class="mt-4"><a href="contact.html" class="btn btn-premium px-5">Book a Shoot</a></li>
+    </ul>
+  </div>
+
+  <!-- Services Core Section -->
+  <section class="section-padding" style="margin-top: 80px;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-5">
+        <div class="col-12">
+          <div class="section-number">02</div>
+          <span class="accent-text">Offerings</span>
+          <h1 class="display-2 mt-2">Cinematic Media & Virtual Services</h1>
+          <p class="lead mt-3">I deliver premium imagery, engaging walkthrough videos, and realistic 3D floor structures that command attention and convert leads.</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Services Stack Section -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+      <!-- Detail Services Stack -->
+      <div class="row g-5">
+        
+        <!-- Service 1 -->
+        <div class="col-md-6">
+          <div class="p-5 border border-secondary-subtle h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--border-color) !important;">
+            <div>
+              <div class="accent-text mb-3" style="color: var(--accent-color);">01 / Photography</div>
+              <h3 class="h4 text-uppercase mb-3">Architectural Photography</h3>
+              <p class="small text-muted mb-4">
+                High-end interior and exterior coverage using manual exposure bracketing, custom fill flash, and polarization. Ideal for luxury listings, magazine spreads, and architect portfolios.
+              </p>
+              <ul class="small text-muted ps-3 mb-4">
+                <li>Multiple ambient-flash exposure blends (Flambient)</li>
+                <li>Perspective control and vertical line corrections</li>
+                <li>Digital item removal and sky replacements</li>
+              </ul>
+            </div>
+            <div>
+              <a href="service-details.html" class="btn btn-premium">View Specifics</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6">
+          <div class="p-5 border border-secondary-subtle h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--border-color) !important;">
+            <div>
+              <div class="accent-text mb-3" style="color: var(--accent-color);">02 / Video</div>
+              <h3 class="h4 text-uppercase mb-3">Cinematic Property Video</h3>
+              <p class="small text-muted mb-4">
+                Story-driven property tour films utilizing full-frame gimbal systems, slow panning tracking, and custom sound design. Captures the physical layout and lifestyle of the home.
+              </p>
+              <ul class="small text-muted ps-3 mb-4">
+                <li>High-definition 4K HDR footage at 60fps</li>
+                <li>Custom agent introduction layouts and drone paths</li>
+                <li>Licenced music scoring and fast 48-hour delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="service-details.html" class="btn btn-premium">View Specifics</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6">
+          <div class="p-5 border border-secondary-subtle h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--border-color) !important;">
+            <div>
+              <div class="accent-text mb-3" style="color: var(--accent-color);">03 / Drone</div>
+              <h3 class="h4 text-uppercase mb-3">Drone Photography & Video</h3>
+              <p class="small text-muted mb-4">
+                FAA Part 107 certified aerial operations mapping exact land outlines, local context, and beautiful scenic overviews. Perfect for acreage, coastal estates, and commercial buildings.
+              </p>
+              <ul class="small text-muted ps-3 mb-4">
+                <li>Detailed lot boundary line overlays</li>
+                <li>Surrounding neighborhood context clips</li>
+                <li>High-resolution 48MP aerial stills</li>
+              </ul>
+            </div>
+            <div>
+              <a href="service-details.html" class="btn btn-premium">View Specifics</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6">
+          <div class="p-5 border border-secondary-subtle h-100 d-flex flex-column justify-content-between" style="background-color: var(--card-bg); border-color: var(--border-color) !important;">
+            <div>
+              <div class="accent-text mb-3" style="color: var(--accent-color);">04 / 3D virtual</div>
+              <h3 class="h4 text-uppercase mb-3">360 Virtual Walkthrough</h3>
+              <p class="small text-muted mb-4">
+                Immersive 3D Matterport tours, virtual floor navigations, and structural dollhouse plans. Ideal for out-of-town investors and continuous digital open houses.
+              </p>
+              <ul class="small text-muted ps-3 mb-4">
+                <li>Digital twin structures with hotspots</li>
+                <li>Detailed schematics floor plans in PDF</li>
+                <li>VR headset compatible rendering</li>
+              </ul>
+            </div>
+            <div>
+              <a href="service-details.html" class="btn btn-premium">View Specifics</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Detailed Services Breakdowns -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-5 text-center">
+        <div class="col-12">
+          <div class="section-number">03</div>
+          <span class="accent-text">Specifications</span>
+          <h2 class="display-2 mt-2">Detailed Service Breakdowns</h2>
+          <p class="lead mt-3 mx-auto text-muted" style="max-width: 650px;">Explore the custom workflows, advanced techniques, and premium deliverables provided for each media format.</p>
+        </div>
+      </div>
+
+      <!-- Breakdown 1: Real Estate Photography -->
+      <div class="row g-5 align-items-center mb-5 pb-5 border-bottom" style="border-color: rgba(var(--accent-rgb), 0.05) !important;">
+        <div class="col-lg-6">
+          <span class="accent-text" style="color: var(--accent-color);">01 / Stills</span>
+          <h3 class="display-5 text-uppercase mt-2 mb-4">Real Estate Photography</h3>
+          <p class="text-muted mb-4">
+            Professional high-end photography forms the foundation of any luxury listing. Using state-of-the-art camera bodies and wide-angle lenses, I capture interior and exterior spaces with dramatic precision.
+          </p>
+          <div class="services-highlight-box text-muted small">
+            Every photo goes through a meticulous hand-blending retouched workflow, correcting lens distortions and balancing interior/exterior color profiles.
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <h4 class="h6 text-uppercase mb-4">What's Included & Workflow</h4>
+          <ul class="services-detailed-list">
+            <li><strong>Flambient Blending:</strong> Combination of flash and ambient exposures for optimal window views and accurate interior color tones.</li>
+            <li><strong>Perspective Control:</strong> Correction of vertical and horizontal lines so structural elements remain perfectly parallel.</li>
+            <li><strong>Premium Retouching:</strong> Sky replacement (for overcast days), digital cleaning, and object removal.</li>
+            <li><strong>Twilight Shoots:</strong> Capturing properties during the golden hour to showcase exterior architectural lighting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Breakdown 2: Drone Photography -->
+      <div class="row g-5 align-items-center mb-5 pb-5 border-bottom" style="border-color: rgba(var(--accent-rgb), 0.05) !important;">
+        <div class="col-lg-5 order-2 order-lg-1">
+          <h4 class="h6 text-uppercase mb-4">What's Included & Workflow</h4>
+          <ul class="services-detailed-list">
+            <li><strong>Part 107 Compliance:</strong> All flights are conducted legally by an FAA-licensed and fully insured remote pilot.</li>
+            <li><strong>High-Resolution Stills:</strong> 48MP aerial photography capturing massive spreads, details, and site plans.</li>
+            <li><strong>Cinematic Fly-Bys:</strong> Smooth, slow motion orbits and sweeping reveal movements for marketing videos.</li>
+            <li><strong>Boundary Overlays:</strong> Clear digital drawing of property lines and lot borders onto aerial stills.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 offset-lg-1 order-1 order-lg-2">
+          <span class="accent-text" style="color: var(--accent-color);">02 / Aerial</span>
+          <h3 class="display-5 text-uppercase mt-2 mb-4">Drone Photography</h3>
+          <p class="text-muted mb-4">
+            Showcase a property's surrounding environment, landscape, and absolute scope. Aerial drone media offers essential context for large luxury estates, commercial acreage, and waterfront properties.
+          </p>
+          <div class="services-highlight-box text-muted small">
+            Providing legal, certified drone solutions that capture neighborhood locations, coastal boundaries, and stunning bird's-eye sweeps.
+          </div>
+        </div>
+      </div>
+
+      <!-- Breakdown 3: Cinematic Video -->
+      <div class="row g-5 align-items-center mb-5 pb-5 border-bottom" style="border-color: rgba(var(--accent-rgb), 0.05) !important;">
+        <div class="col-lg-6">
+          <span class="accent-text" style="color: var(--accent-color);">03 / Motion</span>
+          <h3 class="display-5 text-uppercase mt-2 mb-4">Cinematic Video</h3>
+          <p class="text-muted mb-4">
+            Movement tells a lifestyle story. I produce premium, high-definition video walkthroughs that guide prospective buyers through the architectural highlights of a home.
+          </p>
+          <div class="services-highlight-box text-muted small">
+            Films are shot in full 4K UHD, featuring slow, deliberate gimbal transitions, licensed soundtrack scoring, and professional color grading.
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <h4 class="h6 text-uppercase mb-4">What's Included & Workflow</h4>
+          <ul class="services-detailed-list">
+            <li><strong>Gimbal Stabilization:</strong> Smooth walk-through motion that simulates a continuous, fluid architectural path.</li>
+            <li><strong>Licensed Music:</strong> Soundtracks curated and licensed for commercial real estate marketing across all platforms.</li>
+            <li><strong>Social Media Cuts:</strong> 30 to 60-second vertical formats optimized for Instagram Reels, TikTok, and YouTube Shorts.</li>
+            <li><strong>Agent Walkthroughs:</strong> Optional microphone setup and teleprompter support for presenting agents on-camera.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Breakdown 4: Virtual Tours -->
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 order-2 order-lg-1">
+          <h4 class="h6 text-uppercase mb-4">What's Included & Workflow</h4>
+          <ul class="services-detailed-list">
+            <li><strong>Matterport Pro3 LiDAR:</strong> High-precision laser scans mapping up to 100 meters, ideal for large residential and commercial properties.</li>
+            <li><strong>Schematic Floor Plans:</strong> Professional, dimensioned black-and-white 2D floor plans delivered in PDF format.</li>
+            <li><strong>Interactive Hotspots:</strong> Clickable text or media dots embedded in the tour to detail high-end finishes, views, or appliance models.</li>
+            <li><strong>Permanent Hosting:</strong> Secure digital hosting links provided for integration directly onto MLS, Zillow, or personal websites.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 offset-lg-1 order-1 order-lg-2">
+          <span class="accent-text" style="color: var(--accent-color);">04 / Immersive</span>
+          <h3 class="display-5 text-uppercase mt-2 mb-4">Virtual Tours</h3>
+          <p class="text-muted mb-4">
+            Provide continuous access to listings with fully immersive digital twin models. Prospective buyers can walk through rooms virtually at their own pace, inspecting layouts from anywhere in the world.
+          </p>
+          <div class="services-highlight-box text-muted small">
+            Perfect for remote high-value investors. LiDAR scans construct detailed 3D dollhouse maps, facilitating virtual spatial orientation.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-premium text-start">
+    <div class="container">
+      
+      <div class="row g-5 mb-5 justify-content-between">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand-premium mb-3 d-inline-flex" style="text-decoration: none;" href="index.html">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+              <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+              <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+              <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+            </svg>
+            <span>ArchLens</span>
+          </a>
+          <p class="small text-muted">
+            I photograph luxury spaces with premium architectural details. Delivering million-dollar portfolios for premium real estate brokers globally.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-link"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-vimeo fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Explore</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal / Extra Pages -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Pages</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">Service Details</a></li>
+            <li><a href="404.html" class="footer-link">404 Error</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Book Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="col-md-4 col-lg-3">
+          <h5 class="small accent-text mb-4">Contact Me</h5>
+          <p class="small text-muted mb-2">Based in Los Angeles, California</p>
+          <a href="mailto:shoot@archlens.com" class="footer-link d-block mb-1">shoot@archlens.com</a>
+          <a href="tel:+13105550199" class="footer-link d-block">+1 (310) 555-0199</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="row pt-4 border-top border-secondary-subtle" style="border-color: var(--border-color) !important;">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link me-4">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/canvas-3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

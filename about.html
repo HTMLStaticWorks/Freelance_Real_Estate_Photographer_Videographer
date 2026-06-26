@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | ArchLens</title>
+  <meta name="description" content="Learn more about my background, architectural perspective, and how I capture luxury real estate across the country.">
+  
+  <!-- CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="text-center">
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Loading Preloader -->
+  <div class="preloader">
+    <div class="preloader-shutter"></div>
+    <div class="preloader-text">ArchLens</div>
+  </div>
+
+  <!-- 3D WebGL Background -->
+  <div id="canvas-container" class="canvas-container" style="opacity: 0.35;"></div>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-premium scrolled fixed-top">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand-premium" href="index.html">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+            <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+            <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+            <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+          </svg>
+          <span>ArchLens</span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-premium dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item dropdown-item-premium" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Controls (Theme, RTL, CTA) -->
+        <div class="header-controls">
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="btn-control" aria-label="Toggle Theme">
+            <i class="bi bi-sun"></i>
+          </button>
+          
+          <!-- RTL Toggle -->
+          <button id="rtl-toggle" class="btn-control" aria-label="Toggle RTL/LTR">RTL</button>
+          
+          <!-- Primary CTA -->
+          <a href="contact.html" class="btn btn-premium d-none d-xl-inline-block">Book a Shoot</a>
+          
+          <!-- Mobile Menu Toggler -->
+          <button class="navbar-toggler-premium d-xl-none" type="button" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas-premium d-xl-none">
+    <ul class="offcanvas-nav">
+      <li><a class="offcanvas-nav-link" href="index.html">Home 1</a></li>
+      <li><a class="offcanvas-nav-link" href="home-2.html">Home 2</a></li>
+      <li><a class="offcanvas-nav-link" href="about.html">About</a></li>
+      <li><a class="offcanvas-nav-link" href="services.html">Services</a></li>
+      <li><a class="offcanvas-nav-link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="offcanvas-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="offcanvas-nav-link" href="contact.html">Contact</a></li>
+      <li class="mt-4"><a href="contact.html" class="btn btn-premium px-5">Book a Shoot</a></li>
+    </ul>
+  </div>
+
+  <!-- Main About Content (Hero Header) -->
+  <section class="section-padding" style="margin-top: 80px;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-0">
+        <div class="col-12 text-center">
+          <div class="section-number">01</div>
+          <span class="accent-text">The Story</span>
+          <h1 class="display-2 mt-2">I Capture Properties Through Cinematic Photography & Storytelling</h1>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+
+      <!-- Introduction Grid -->
+      <div class="row g-5 align-items-center mb-5">
+        
+        <!-- Profile Image Column -->
+        <div class="col-lg-5">
+          <div class="hero-media-wrapper">
+            <div class="hero-img-container" style="aspect-ratio: 4/5;">
+              <img src="assets/photographer.jpg" alt="Freelance Photographer Portrait" style="animation: none;">
+            </div>
+            <div class="p-4 border-top border-secondary-subtle bg-black bg-opacity-25" style="border-color: var(--border-color) !important;">
+              <h5 class="fw-light mb-1">Founder & Lead Photographer</h5>
+              <p class="small text-muted mb-0">ArchLens Studio</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description Column -->
+        <div class="col-lg-7">
+          <h3 class="fw-light mb-4 text-uppercase tracking-wider">Blending Architecture & Cinema</h3>
+          <p class="lead mb-4">
+            Hello, I am the lead visual artist behind ArchLens. I believe that real estate isn't just about structures; it is about lifestyle, lighting, and stories waiting to be told.
+          </p>
+          <p class="mb-4">
+            For over five years, I have collaborated with luxury brokers, elite homebuilders, and modern architects to showcase homes in their absolute best light. My workflow integrates FAA drone flights, advanced HDR architectural framing, and immersive virtual modeling to deliver assets that help properties sell faster and command premium rates.
+          </p>
+          <p class="mb-5">
+            I don’t just take snapshots. I study how natural light traces across concrete walls, wood paneling, and glass spans, planning every shoot around the sun's path to create dramatic, editorial-grade visual walkthroughs.
+          </p>
+
+          <!-- Dynamic Statistics Row -->
+          <div class="row g-4 border-top border-secondary-subtle pt-4" style="border-color: var(--border-color) !important;">
+            <div class="col-4">
+              <div class="display-5 text-uppercase fw-light" style="color: var(--accent-color);">150+</div>
+              <div class="small text-muted text-uppercase tracking-wider mt-1" style="font-size: 0.7rem;">Properties Captured</div>
+            </div>
+            <div class="col-4">
+              <div class="display-5 text-uppercase fw-light" style="color: var(--accent-color);">50+</div>
+              <div class="small text-muted text-uppercase tracking-wider mt-1" style="font-size: 0.7rem;">Happy Agents</div>
+            </div>
+            <div class="col-4">
+              <div class="display-5 text-uppercase fw-light" style="color: var(--accent-color);">5+</div>
+              <div class="small text-muted text-uppercase tracking-wider mt-1" style="font-size: 0.7rem;">Years Experience</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Detail Timeline / Expertise -->
+      <div class="row mt-5 pt-5 border-top border-secondary-subtle" style="border-color: var(--border-color) !important;">
+        <div class="col-12 mb-4">
+          <span class="accent-text">Core Competence</span>
+          <h3 class="fw-light text-uppercase mt-2">Areas of Specialization</h3>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="p-4 border border-secondary-subtle h-100" style="border-color: var(--border-color) !important; background-color: var(--card-bg);">
+            <h5 class="fw-normal mb-3" style="color: var(--accent-color);">01 / Luxury Homes</h5>
+            <p class="small text-muted mb-0">Framing high-end materials, premium kitchen marble slabs, open patios, and swimming deck light sweeps.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="p-4 border border-secondary-subtle h-100" style="border-color: var(--border-color) !important; background-color: var(--card-bg);">
+            <h5 class="fw-normal mb-3" style="color: var(--accent-color);">02 / Drone Cinematography</h5>
+            <p class="small text-muted mb-0">Capturing cinematic birds-eye views, coastal boundaries, and contextual mountain/ocean backdrops.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="p-4 border border-secondary-subtle h-100" style="border-color: var(--border-color) !important; background-color: var(--card-bg);">
+            <h5 class="fw-normal mb-3" style="color: var(--accent-color);">03 / Matterport & 3D Walkthroughs</h5>
+            <p class="small text-muted mb-0">Constructing interactive digital twins and structural dollhouse plans for overseas high-value investors.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Freelancer Story & Experience Timeline -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Story Column -->
+        <div class="col-lg-6">
+          <div class="section-title-wrapper mb-4">
+            <div class="section-number">02</div>
+            <span class="accent-text">Evolution</span>
+            <h2 class="display-3 mt-2">The Freelancer Story</h2>
+          </div>
+          <p class="lead mb-4" style="color: var(--accent-color);">
+            Merging architectural design theory with digital visual arts.
+          </p>
+          <p class="text-muted mb-4">
+            My journey in real estate media began in 2021. Drawing from a formal background in design theory, I realized that modern listings deserved more than simple wide-angle snapshots. I set out to capture how spaces feel, how light interacts with premium textures, and how room layouts connect flow.
+          </p>
+          <p class="text-muted mb-4">
+            Over the years, I have collaborated with luxury brokers, custom builders, and structural designers. Every property tells a story of planning, construction, and lifestyle. My mission is to translate that structural beauty into high-impact media asset packages that engage premium buyers and help agents list with pride.
+          </p>
+        </div>
+
+        <!-- Experience Timeline Column -->
+        <div class="col-lg-5 offset-lg-1">
+          <div class="section-title-wrapper mb-5">
+            <div class="section-number">03</div>
+            <span class="accent-text">Milestones</span>
+            <h2 class="display-3 mt-2">Experience</h2>
+          </div>
+          
+          <div class="milestone-timeline">
+            
+            <div class="milestone-item">
+              <div class="milestone-dot-indicator"></div>
+              <div class="milestone-year">2021</div>
+              <h4 class="h6 text-uppercase mb-2">Studio Foundation</h4>
+              <p class="small text-muted mb-0">Launched ArchLens Studio with a commitment to architectural photography, building standard workflows for luxury agents.</p>
+            </div>
+            
+            <div class="milestone-item">
+              <div class="milestone-dot-indicator"></div>
+              <div class="milestone-year">2022</div>
+              <h4 class="h6 text-uppercase mb-2">Aerial Expansion</h4>
+              <p class="small text-muted mb-0">Earned FAA Part 107 certification and added professional drone cinematography to map estates and property coordinates.</p>
+            </div>
+            
+            <div class="milestone-item">
+              <div class="milestone-dot-indicator"></div>
+              <div class="milestone-year">2024</div>
+              <h4 class="h6 text-uppercase mb-2">Spatial 3D Tours</h4>
+              <p class="small text-muted mb-0">Integrated high-precision laser scanners, offering interactive virtual walkthroughs and digital twin structures.</p>
+            </div>
+            
+            <div class="milestone-item">
+              <div class="milestone-dot-indicator"></div>
+              <div class="milestone-year">2026</div>
+              <h4 class="h6 text-uppercase mb-2">Luxury Portfolio</h4>
+              <p class="small text-muted mb-0">Captured over 150+ properties, establishing long-term collaborations with elite regional real estate agencies.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography Style -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-5 text-center">
+        <div class="col-12">
+          <div class="section-number">04</div>
+          <span class="accent-text">Artistic Vision</span>
+          <h2 class="display-2 mt-2">Photography Style</h2>
+          <p class="lead mt-3 mx-auto text-muted" style="max-width: 650px;">A calculated, architectural approach to framing structures and capturing high-end interior layouts.</p>
+        </div>
+      </div>
+
+      <!-- Styles Grid -->
+      <div class="row g-4">
+        
+        <!-- Style 1 -->
+        <div class="col-lg-4">
+          <div class="photo-style-card">
+            <div class="gear-icon mx-auto mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </div>
+            <h4 class="h5 text-uppercase mb-3">Chasing Natural Light</h4>
+            <p class="small text-muted mb-0">
+              I schedule every session around solar orientation. This ensures the sunlight traces across structures perfectly, revealing textures of concrete, wood panels, and stone walls during the most dramatic twilight window.
+            </p>
+          </div>
+        </div>
+
+        <!-- Style 2 -->
+        <div class="col-lg-4">
+          <div class="photo-style-card">
+            <div class="gear-icon mx-auto mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h4 class="h5 text-uppercase mb-3">Flambient Exposure Blending</h4>
+            <p class="small text-muted mb-0">
+              I combine multiple ambient exposure bracket layers with targeted off-camera flash units (strobe setups). This manual blending process creates clean, accurate window views, true color tones, and soft shadows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Style 3 -->
+        <div class="col-lg-4">
+          <div class="photo-style-card">
+            <div class="gear-icon mx-auto mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+                <line x1="15" y1="3" x2="15" y2="21"></line>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="3" y1="15" x2="21" y2="15"></line>
+              </svg>
+            </div>
+            <h4 class="h5 text-uppercase mb-3">Geometrical Perspective</h4>
+            <p class="small text-muted mb-0">
+              Architecture relies on strict spatial geometry. I ensure vertical structures, window frames, and pillars remain perfectly parallel. Zero vertical convergence or distortion guarantees a spacious, premium, editorial result.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gear Arsenal -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important; position: relative; z-index: 2;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper mb-5 text-center">
+        <div class="col-12">
+          <div class="section-number">05</div>
+          <span class="accent-text">Professional Kit</span>
+          <h2 class="display-2 mt-2">Equipment</h2>
+          <p class="lead mt-3 mx-auto text-muted" style="max-width: 650px;">Commanding the highest listing premiums requires industry-standard architectural tools. Here is the gear package brought to every shoot.</p>
+        </div>
+      </div>
+
+      <!-- Gear Grid -->
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Gear 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gear-card">
+            <div>
+              <div class="gear-icon mx-auto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <span class="accent-text mb-2 d-block" style="font-size: 0.75rem;">Main Camera Body</span>
+              <h4 class="h5 text-uppercase mb-3">Sony A7R V (61 Megapixels)</h4>
+              <p class="small text-muted mb-0">
+                An ultra-high resolution sensor that captures clean interior design details, micro-textures, and fine panel highlights.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gear 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gear-card">
+            <div>
+              <div class="gear-icon mx-auto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <span class="accent-text mb-2 d-block" style="font-size: 0.75rem;">Premium Optics</span>
+              <h4 class="h5 text-uppercase mb-3">Sony FE 12-24mm f/2.8 GM</h4>
+              <p class="small text-muted mb-0">
+                Premium wide-angle G-Master lens. Delivers linear perspective corrections, capturing entire spaces without barrel distortion.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gear 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gear-card">
+            <div>
+              <div class="gear-icon mx-auto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+              <span class="accent-text mb-2 d-block" style="font-size: 0.75rem;">UHD Aerial Drone</span>
+              <h4 class="h5 text-uppercase mb-3">DJI Mavic 3 Pro (FAA Certified)</h4>
+              <p class="small text-muted mb-0">
+                Equipped with a triple Hasselblad camera system for ultra-high-definition bird's-eye views and listing coordinates mapping.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gear 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gear-card">
+            <div>
+              <div class="gear-icon mx-auto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <span class="accent-text mb-2 d-block" style="font-size: 0.75rem;">Lighting Kit</span>
+              <h4 class="h5 text-uppercase mb-3">Profoto B10X Lighting System</h4>
+              <p class="small text-muted mb-0">
+                Off-camera location strobe flash units that ensure natural color rendering indexes, balancing window highlights and deep shadow details.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gear 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gear-card">
+            <div>
+              <div class="gear-icon mx-auto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </div>
+              <span class="accent-text mb-2 d-block" style="font-size: 0.75rem;">3D Spatial Scanner</span>
+              <h4 class="h5 text-uppercase mb-3">Matterport Pro3 LiDAR Camera</h4>
+              <p class="small text-muted mb-0">
+                Uses high-precision laser sweeps to construct digital twin layouts and virtual property walk-through environments.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-premium text-start">
+    <div class="container">
+      
+      <div class="row g-5 mb-5 justify-content-between">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand-premium mb-3 d-inline-flex" style="text-decoration: none;" href="index.html">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+              <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+              <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+              <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+            </svg>
+            <span>ArchLens</span>
+          </a>
+          <p class="small text-muted">
+            I photograph luxury spaces with premium architectural details. Delivering million-dollar portfolios for premium real estate brokers globally.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-link"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-vimeo fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Explore</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal / Extra Pages -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Pages</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">Service Details</a></li>
+            <li><a href="404.html" class="footer-link">404 Error</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Book Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="col-md-4 col-lg-3">
+          <h5 class="small accent-text mb-4">Contact Me</h5>
+          <p class="small text-muted mb-2">Based in Los Angeles, California</p>
+          <a href="mailto:shoot@archlens.com" class="footer-link d-block mb-1">shoot@archlens.com</a>
+          <a href="tel:+13105550199" class="footer-link d-block">+1 (310) 555-0199</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="row pt-4 border-top border-secondary-subtle" style="border-color: var(--border-color) !important;">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link me-4">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/canvas-3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

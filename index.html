@@ -1,1 +1,495 @@
-Freelance_Real_Estate_Photographer_Videographer
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchLens | Luxury Real Estate Photographer & Videographer</title>
+  <meta name="description" content="I capture properties through cinematic photography, drone cinematography, and interactive 3D virtual tours. Personal portfolio of a premium real estate media freelancer.">
+  
+  <!-- CDNs -->
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Loading Preloader Shutter -->
+  <div class="preloader">
+    <div class="preloader-shutter"></div>
+    <div class="preloader-text">ArchLens</div>
+  </div>
+
+  <!-- 3D WebGL Villa Canvas (Sticky Background) -->
+  <div id="canvas-container" class="canvas-container"></div>
+
+  <!-- Sticky Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-premium fixed-top">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand-premium" href="index.html">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+            <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+            <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+            <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+          </svg>
+          <span>ArchLens</span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="collapse navbar-collapse justify-content-center navbar-nav-desktop">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-premium dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item dropdown-item-premium active" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item dropdown-item-premium" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-premium" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Controls (Theme, RTL, CTA) -->
+        <div class="header-controls">
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="btn-control" aria-label="Toggle Theme">
+            <i class="bi bi-sun"></i>
+          </button>
+          
+          <!-- RTL Toggle -->
+          <button id="rtl-toggle" class="btn-control" aria-label="Toggle RTL/LTR">RTL</button>
+          
+          <!-- Primary CTA -->
+          <a href="contact.html" class="btn btn-premium d-none d-xl-inline-block">Book a Shoot</a>
+          
+          <!-- Mobile Menu Toggler -->
+          <button class="navbar-toggler-premium d-xl-none" type="button" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Full-Screen Offcanvas Mobile Menu -->
+  <div class="offcanvas-premium d-xl-none">
+    <ul class="offcanvas-nav">
+      <li><a class="offcanvas-nav-link" href="index.html">Home 1</a></li>
+      <li><a class="offcanvas-nav-link" href="home-2.html">Home 2</a></li>
+      <li><a class="offcanvas-nav-link" href="about.html">About</a></li>
+      <li><a class="offcanvas-nav-link" href="services.html">Services</a></li>
+      <li><a class="offcanvas-nav-link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="offcanvas-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="offcanvas-nav-link" href="contact.html">Contact</a></li>
+      <li class="mt-4"><a href="contact.html" class="btn btn-premium px-5">Book a Shoot</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-wrapper">
+    <div class="container">
+      <div class="row align-items-center justify-content-center min-vh-100 text-center">
+        
+        <!-- Left Text Block -->
+        <div class="col-lg-8 hero-content py-5">
+          <span class="accent-text mb-3 d-block">Freelance Real Estate Media</span>
+          <h1 class="display-1 text-uppercase mb-4">Transform Properties Into Visual Stories</h1>
+          <p class="lead mb-5">
+            I capture architectural spaces through cinematic photography, high-definition drone visuals, and fully immersive 3D virtual tours. Tailored to help modern agents list houses beautifully and command premium rates.
+          </p>
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a href="contact.html" class="btn btn-premium">Book a Property Shoot</a>
+            <a href="portfolio.html" class="btn btn-premium btn-secondary-custom" style="border-color: rgba(var(--accent-rgb), 0.5);">View Portfolio</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Media Section -->
+  <section class="section-padding pt-0" style="margin-top: -50px; position: relative; z-index: 2;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="hero-media-wrapper">
+            <div class="hero-img-container">
+              <img src="assets/hero-exterior.jpg" alt="Luxury Villa Architectural View">
+            </div>
+            <div class="p-4 border-top border-secondary-subtle bg-black bg-opacity-25" style="border-color: var(--border-color) !important;">
+              <h5 class="fw-light mb-1">Modern Residential Showcase</h5>
+              <p class="small text-muted mb-0">Captured in Ultra-HD, optimized dynamic range.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Portfolio Grid Section -->
+  <section class="section-padding portfolio-grid-trigger border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper align-items-end">
+        <div class="col-md-8 text-center text-xl-start">
+          <div class="section-number">02</div>
+          <span class="accent-text">Craftsmanship</span>
+          <h2 class="display-2 mt-2 mb-0">Featured Portfolio</h2>
+        </div>
+        <div class="col-md-4 text-center text-xl-end mt-3 mt-md-0">
+          <a href="portfolio.html" class="btn btn-premium">View Gallery</a>
+        </div>
+      </div>
+
+      <!-- Categories Filter -->
+      <div class="portfolio-filters justify-content-start">
+        <button class="portfolio-filter-btn active" data-filter="all">All Properties</button>
+        <button class="portfolio-filter-btn" data-filter="luxury">Luxury Homes</button>
+        <button class="portfolio-filter-btn" data-filter="apartments">Apartments</button>
+        <button class="portfolio-filter-btn" data-filter="commercial">Commercial</button>
+        <button class="portfolio-filter-btn" data-filter="architecture">Architecture</button>
+      </div>
+
+      <!-- Grid list -->
+      <div class="row justify-content-center">
+        
+        <!-- Item 1 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="luxury">
+          <div class="portfolio-item">
+            <img src="assets/hero-exterior.jpg" class="portfolio-item-img" alt="Luxury Glass Residence">
+            <div class="portfolio-item-overlay">
+              <span class="accent-text text-white-50">Luxury Homes</span>
+              <h3 class="h4 mt-2">The Glass Residence</h3>
+              <p class="small text-muted mb-0">Malibu, California | 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="apartments">
+          <div class="portfolio-item">
+            <img src="assets/after-shoot.jpg" class="portfolio-item-img" alt="Modern Penthouse Lounge">
+            <div class="portfolio-item-overlay">
+              <span class="accent-text text-white-50">Apartments</span>
+              <h3 class="h4 mt-2">Skyline Penthouse Lounge</h3>
+              <p class="small text-muted mb-0">Manhattan, NY | 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="architecture">
+          <div class="portfolio-item">
+            <!-- Reuse landscape images gracefully -->
+            <img src="assets/hero-exterior.jpg" class="portfolio-item-img" alt="Brutalist Concrete Concept" style="filter: grayscale(1) brightness(0.85);">
+            <div class="portfolio-item-overlay">
+              <span class="accent-text text-white-50">Architecture</span>
+              <h3 class="h4 mt-2">Concrete Brutalist Form</h3>
+              <p class="small text-muted mb-0">Dallas, Texas | 2026</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Before/After Showcase Section -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper">
+        <div class="col-12 text-center text-xl-start">
+          <div class="section-number">03</div>
+          <span class="accent-text">Post-Production Mastery</span>
+          <h2 class="display-2 mt-2">Before & After Showcase</h2>
+          <p class="lead mt-3">Drag the golden center line to witness the raw dynamic range correction and clean-up editing process.</p>
+        </div>
+      </div>
+
+      <!-- Before/After Slider Container -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="before-after-container">
+            
+            <!-- Before Image -->
+            <div class="ba-image ba-before">
+              <img src="assets/before-shoot.jpg" alt="Before Editing Raw Shot">
+              <div class="ba-label before-label">RAW OUT-OF-CAMERA</div>
+            </div>
+
+            <!-- After Image -->
+            <div class="ba-image ba-after">
+              <img src="assets/after-shoot.jpg" alt="After Professional Retouching">
+              <div class="ba-label after-label">FINAL EDIT</div>
+            </div>
+
+            <!-- Handle Bar -->
+            <div class="ba-handle">
+              <div class="ba-handle-button">
+                <i class="bi bi-arrows-expand-vertical" style="transform: rotate(90deg);"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Drone HUD Perspective Section -->
+  <section class="section-padding drone-section border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper align-items-center">
+        <div class="col-lg-6 text-center text-xl-start">
+          <div class="section-number">04</div>
+          <span class="accent-text">Aerial View</span>
+          <h2 class="display-2 mt-2">See Every Property From Above</h2>
+          <p class="lead mt-4 text-white-50">I deliver FAA-certified drone paths, establishing complete visual boundaries and beautiful lot sizes.</p>
+        </div>
+        
+        <!-- HUD display on right -->
+        <div class="col-lg-6">
+          <div class="drone-video-container">
+            <div class="drone-video-overlay"></div>
+            
+            <!-- Simulated HUD -->
+            <div class="drone-hud">
+              <div class="drone-hud-top">
+                <div>ALT: 120M &nbsp; SAT: 18 &nbsp; SIG: 100%</div>
+                <div>REC [RAW 4K]</div>
+              </div>
+              <div class="drone-crosshair"></div>
+              <div class="drone-hud-bottom">
+                <div>LAT: 34.0194° N <br> LNG: 118.4912° W</div>
+                 <div>ARCHLENS PILOT OPS</div>
+              </div>
+            </div>
+            
+            <!-- Looping background media representation -->
+            <img src="assets/hero-exterior.jpg" alt="Drone View Simulation" style="width:100%; height:100%; object-fit:cover; transform:scale(1.15); filter: contrast(1.1) brightness(0.95);">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 360 Virtual Tour Simulation Section -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper text-center">
+        <div class="col-12">
+          <div class="section-number">05</div>
+          <span class="accent-text">Immersive Virtualization</span>
+          <h2 class="display-2 mt-2">Interactive 360 Property Tour</h2>
+          <p class="lead mt-3">Click on navigation hotspots or drag the screen to walk through the spaces virtually.</p>
+        </div>
+      </div>
+
+      <!-- Tour Container -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div id="tour-container" class="tour-container">
+            
+            <!-- The Canvas where panoramas pan -->
+            <canvas id="tour-canvas" class="tour-canvas"></canvas>
+            
+            <!-- Navigation controls at bottom center -->
+            <div class="tour-controls">
+              <button class="tour-control-btn active" data-room="living">LIVING ROOM</button>
+              <button class="tour-control-btn" data-room="bedroom">BEDROOM</button>
+              <button class="tour-control-btn" data-room="pool">POOL DECK</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Process Timeline Section -->
+  <section class="section-padding border-top" style="border-color: rgba(var(--accent-rgb), 0.1) !important;">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row section-title-wrapper text-center">
+        <div class="col-12">
+          <div class="section-number">06</div>
+          <span class="accent-text">Workflow</span>
+          <h2 class="display-2 mt-2">Photography Production Timeline</h2>
+        </div>
+      </div>
+
+      <!-- Process timeline timeline container -->
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        
+        <!-- Step 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">01</div>
+          <h3 class="h4 mb-2">Consultation & Planning</h3>
+          <p class="small text-muted mb-0">We outline lighting times, sun paths, and visual priorities specific to the architectural features of your listing.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">02</div>
+          <h3 class="h4 mb-2">Property Shoot</h3>
+          <p class="small text-muted mb-0">I carry out high-definition photography, FAA drone swoops, and 3D scan mapping using premium hardware.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">03</div>
+          <h3 class="h4 mb-2">Premium Editing</h3>
+          <p class="small text-muted mb-0">Color grading, exposure fusion (HDR), vertical line corrections, and visual blemish removal.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">04</div>
+          <h3 class="h4 mb-2">Final High-Speed Delivery</h3>
+          <p class="small text-muted mb-0">I deliver an interactive portal to download high-speed 4K files, social media crops, and embeds in 24 hours.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-premium">
+    <div class="container">
+      
+      <div class="row g-5 mb-5 justify-content-between">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand-premium mb-3 d-inline-flex" style="text-decoration: none;" href="index.html">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+              <polygon points="50,15 70,45 30,45" fill="var(--accent-color)" opacity="0.4"/>
+              <polygon points="50,85 70,55 30,55" fill="var(--accent-color)" opacity="0.8"/>
+              <line x1="50" y1="15" x2="50" y2="85" stroke="var(--accent-color)" stroke-width="1"/>
+            </svg>
+            <span>ArchLens</span>
+          </a>
+          <p class="small text-muted">
+            I photograph luxury spaces with premium architectural details. Delivering million-dollar portfolios for premium real estate brokers globally.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-link"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-vimeo fs-5"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Explore</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal / Extra Pages -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="small accent-text mb-4">Pages</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">Service Details</a></li>
+            <li><a href="404.html" class="footer-link">404 Error</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Book Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="col-md-4 col-lg-3">
+          <h5 class="small accent-text mb-4">Contact Me</h5>
+          <p class="small text-muted mb-2">Based in Los Angeles, California</p>
+          <a href="mailto:shoot@archlens.com" class="footer-link d-block mb-1">shoot@archlens.com</a>
+          <a href="tel:+13105550199" class="footer-link d-block">+1 (310) 555-0199</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="row pt-4 border-top border-secondary-subtle" style="border-color: var(--border-color) !important;">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">&copy; 2026 ArchLens. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="footer-link me-4">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript Files -->
+  <script src="js/canvas-3d.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
