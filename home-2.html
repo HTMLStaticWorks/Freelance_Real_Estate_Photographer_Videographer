@@ -143,7 +143,26 @@
       font-size: 0.9rem;
       color: var(--text-muted);
     }
+
+    /* Mobile/Tablet project thumbnail */
+    .project-mobile-thumb {
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      margin-bottom: 0.5rem;
+    }
+    .project-mobile-thumb img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .hover-project-item:hover .project-mobile-thumb img {
+      transform: scale(1.04);
+    }
   </style>
+
 </head>
 <body class="text-center">
 
@@ -236,7 +255,7 @@
   <div class="offcanvas-premium d-xl-none">
     <ul class="offcanvas-nav">
       <li class="nav-item dropdown">
-        <a class="offcanvas-nav-link " href="#" id="offcanvasHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+        <a class="offcanvas-nav-link active" href="#" id="offcanvasHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
           Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
         </a>
         <ul class="dropdown-menu dropdown-menu-premium" aria-labelledby="offcanvasHomeDropdown" style="background: transparent; border: none; padding-left: 1rem; position: static !important;">
@@ -261,8 +280,8 @@
       A freelance real estate videography and drone storytelling studio. I craft visual portfolios for high-value properties that command luxury premiums.
     </p>
     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-      <a href="contact.html" class="btn btn-premium">Coordinate a Session</a>
-      <a href="#projects" class="btn btn-premium" style="border-color: rgba(var(--accent-rgb), 0.5);">View Projects</a>
+      <a href="contact.html" class="btn btn-premium" style="background-color: var(--accent-color); color: #080808; border-color: var(--accent-color);">Coordinate a Session</a>
+      <a href="#projects" class="btn btn-premium" style="background-color: rgba(8,8,8,0.75); color: #ffffff; border-color: rgba(255,255,255,0.6);">View Projects</a>
     </div>
   </section>
 
@@ -288,6 +307,9 @@
             <span class="project-title">The Malibu Vista</span>
             <span class="project-meta">Malibu Coastline | 2026</span>
           </a>
+          <div class="project-mobile-thumb d-lg-none">
+            <img src="assets/hero-exterior.jpg" alt="The Malibu Vista">
+          </div>
         </li>
 
         <li class="hover-project-item" data-image="assets/after-shoot.jpg">
@@ -296,6 +318,9 @@
             <span class="project-title">Sienna Crest Estate</span>
             <span class="project-meta">Modernist Villa | 2025</span>
           </a>
+          <div class="project-mobile-thumb d-lg-none">
+            <img src="assets/after-shoot.jpg" alt="Sienna Crest Estate">
+          </div>
         </li>
 
         <li class="hover-project-item" data-image="assets/before-shoot.jpg">
@@ -304,6 +329,9 @@
             <span class="project-title">Brutalist Concrete Pavilion</span>
             <span class="project-meta">Concrete Forms | 2026</span>
           </a>
+          <div class="project-mobile-thumb d-lg-none">
+            <img src="assets/before-shoot.jpg" alt="Brutalist Concrete Pavilion">
+          </div>
         </li>
 
         <li class="hover-project-item" data-image="assets/hero-exterior.jpg">
@@ -312,9 +340,12 @@
             <span class="project-title">Pacific Glass Residence</span>
             <span class="project-meta">Ocean Overlooks | 2026</span>
           </a>
+          <div class="project-mobile-thumb d-lg-none">
+            <img src="assets/hero-exterior.jpg" alt="Pacific Glass Residence">
+          </div>
         </li>
 
-        <!-- The Shared floating image container following the mouse -->
+        <!-- The Shared floating image container following the mouse (desktop only) -->
         <div id="floating-project-img" class="hover-project-floating-img">
           <img id="floating-project-img-src" src="assets/hero-exterior.jpg" alt="Preview Frame">
         </div>
@@ -511,23 +542,24 @@
           </ul>
         </div>
 
-        <!-- Col 3: Legal / Extra Pages -->
-        <div class="col-md-4 col-lg-2">
-          <h5 class="small accent-text mb-4">Resources</h5>
-          <ul class="list-unstyled d-flex flex-column gap-2">
-            <li><a href="service-details.html" class="footer-link">Service Details</a></li>
-            <li><a href="404.html" class="footer-link">404 Error</a></li>
-            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
-            <li><a href="contact.html" class="footer-link">Book Now</a></li>
-          </ul>
-        </div>
 
-        <!-- Col 4: Contact info -->
+
+        <!-- Col 3: Contact info -->
         <div class="col-md-4 col-lg-3">
           <h5 class="small accent-text mb-4">Contact Me</h5>
           <p class="small text-muted mb-2">Based in Los Angeles, California</p>
           <a href="mailto:shoot@archlens.com" class="footer-link d-block mb-1">shoot@archlens.com</a>
           <a href="tel:+13105550199" class="footer-link d-block">+1 (310) 555-0199</a>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="col-md-6 col-lg-3">
+          <h5 class="small accent-text mb-3 text-uppercase" style="letter-spacing: 0.1em;">Newsletter Insights</h5>
+          <p class="small text-muted mb-3">Subscribe to receive seasonal insights on luxury property trends, twilight shoot tips, and exclusive media offers.</p>
+          <form class="d-flex gap-2" onsubmit="return false;">
+            <input type="email" class="form-control form-control-sm footer-newsletter-input" placeholder="Professional Email" aria-label="Email address">
+            <button type="submit" class="btn btn-premium btn-sm footer-newsletter-btn px-3" style="white-space: nowrap;">JOIN</button>
+          </form>
         </div>
 
       </div>
